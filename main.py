@@ -11,6 +11,7 @@ def index():
 
 @app.route('/save', methods=['POST'])
 def save_data():
+    print("test")
     data = request.form.to_dict()  # フォームから送信されたデータを取得
     with open('data.json', 'w') as file:
         json.dump(data, file)  # データをJSONファイルに保存
