@@ -11,6 +11,7 @@ def index():
 
 @app.route('/save', methods=['POST'])
 def save_data():
+    print("test1")
     email = request.form['email']
     password = request.form['password']
     
