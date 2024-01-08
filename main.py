@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, render_template
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='./templates/images')
 
 
 @app.route('/')
