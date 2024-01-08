@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, render_template, request, jsonify
 import os
 import json
 
@@ -11,10 +11,11 @@ def index():
 
 @app.route('/save', methods=['POST'])
 def save_data():
-    data = request.form.to_dict()  # フォームからのデータを辞書に変換
+    data = request.form.to_dict()  # フォームから送信されたデータを取得
     with open('data.json', 'w') as file:
         json.dump(data, file)  # データをJSONファイルに保存
-    return 'Data saved successfully!'
+    return jsonify({'message': 'Data saved successfully'})
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=os.getenv("PORT", default=5000))
