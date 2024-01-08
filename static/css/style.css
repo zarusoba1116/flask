@@ -82,17 +82,9 @@ ul { list-style: none; }
 #auth { max-width: 350px; }
 #mobile { max-width: 454px; }
 
-#mobile img {
-    height: 618px;
+.logo {
+    height: 30px;
 }
-
-.panel.login img {
-    max-width: calc(100% - 20px); /* 20px未満の余白を保つため */
-    max-height: 100px; /* 高さの最大値を設定 */
-    width: auto; /* 幅を自動調整 */
-    height: auto; /* 高さを自動調整 */
-  }
-
 /**
  * Login section
  */
