@@ -69,9 +69,8 @@ ul { list-style: none; }
  *
  */
 
-.logo {
-    height: 25px;
-}
+
+  
 
 .panel {
     background-color: white;
@@ -86,6 +85,13 @@ ul { list-style: none; }
 #mobile img {
     height: 618px;
 }
+
+.panel.login img {
+    max-width: calc(100% - 20px); /* 20px未満の余白を保つため */
+    max-height: 100px; /* 高さの最大値を設定 */
+    width: auto; /* 幅を自動調整 */
+    height: auto; /* 高さを自動調整 */
+  }
 
 /**
  * Login section
