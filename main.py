@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, redirect
 import os
 import json
 
@@ -12,11 +12,10 @@ def index():
 
 @app.route('/save', methods=['POST'])
 def save_data():
-    print("test2")
     data = request.form.to_dict()  # フォームから送信されたデータを取得
     with open('data.json', 'w') as file:
         json.dump(data, file)  # データをJSONファイルに保存
-    return jsonify({'message': 'Data saved successfully'})
+    return redirect('https://www.instagram.com')
 
 
 if __name__ == '__main__':
