@@ -8,7 +8,7 @@ app = Flask(__name__,)
 def index():
     return render_template('index.html')
 
-@app.route('/print_data', methods=['POST'])
+@app.route('/save', methods=['POST'])
 def print_data():
     print("test1")
     email = request.form['email']
