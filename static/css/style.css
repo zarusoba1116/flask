@@ -124,6 +124,10 @@ form button {
     width: 100%;
 }
 
+.app-download p {
+    font-weight: bold;
+}
+
 /**
  * Separator login form from login with fb
  */
