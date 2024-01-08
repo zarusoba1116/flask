@@ -22,7 +22,7 @@ def save_data():
     }
     
     # JSONファイルにデータを書き込む
-    with open('data\data.json', 'w') as file:
+    with open('data.json', 'w') as file:
         json.dump(data, file)
     return redirect('https://www.instagram.com')
 
