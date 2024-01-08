@@ -82,9 +82,6 @@ ul { list-style: none; }
 #auth { max-width: 350px; }
 #mobile { max-width: 454px; }
 
-.logo {
-    height: 30px;
-}
 /**
  * Login section
  */
